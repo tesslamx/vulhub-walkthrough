@@ -46,4 +46,16 @@ Now, we can go through the Fingerd service found using the following metasploit 
 
 ![Finger Enumeration](https://github.com/tesslamx/vulhub-walkthrough/blob/master/HackLAB%20-%20Vulnix/images/finger%20metasploit%20enumeration.png)
 
+
+#### Step 3. 
+
+Now that we have some valid users for our target, we can make reconnaissance for last port, this one is 111 for the service PortMapper.
+
+We'll try to identify and check for some others RPC services on the target by using the following NMAP script:
+* nmap -sV --script=nfs-showmount <target>
+
+![rpcinfo and nfs Enumeration](https://github.com/tesslamx/vulhub-walkthrough/blob/master/HackLAB%20-%20Vulnix/images/rpcinfo%20and%20nfs%20enumeration.png)
+
+It's worthly to note that there are some RPC services available but one important is the NFS service on TCP and UDP, moreover we found a shared ***/home/vulnix***. With it, we found another user **vulnix** for our found user list.
+
 ------
