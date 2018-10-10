@@ -1,4 +1,5 @@
-vulhub-walkthrough
+#vulhub-walkthrough
+
 Walkthrough about some Vulhub labs
 
 - HackLAB: Vulnix
