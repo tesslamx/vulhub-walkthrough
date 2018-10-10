@@ -34,4 +34,16 @@ Some interesting ports at this moment would be the following:
 
 These ones would be good for us to start a enumeration phase and check if we can find some valid users on the target.
 
+We start enumerate users against SMTP service with a simple script by [pentestmonkey - smtp-user-enum](http://pentestmonkey.net/tools/user-enumeration/smtp-user-enum).
+
+![SMTP Enumeration](https://github.com/tesslamx/vulhub-walkthrough/blob/master/HackLAB%20-%20Vulnix/images/smtp%20enumeration.png)
+
+We were able to find some users, the users of our interest could be root and user.
+
+Now, we can go through the Fingerd service found using the following metasploit auxiliary and finger tool: 
+  * auxiliary/scanner/finger/finger_users
+  * finger [username]@\<host\>
+
+![Finger Enumeration](https://github.com/tesslamx/vulhub-walkthrough/blob/master/HackLAB%20-%20Vulnix/images/finger%20metasploit%20enumeration.png)
+
 ------
