@@ -56,6 +56,21 @@ We'll try to identify and check for some others RPC services on the target by us
 
 ![rpcinfo and nfs Enumeration](https://github.com/tesslamx/vulhub-walkthrough/blob/master/HackLAB%20-%20Vulnix/images/rpcinfo%20and%20nfs%20enumeration.png)
 
-It's worthly to note that there are some RPC services available but one important is the NFS service on TCP and UDP, moreover we found a shared ***/home/vulnix***. With it, we found another user **vulnix** for our found user list.
+It's worthly to note that there are some RPC services available but one important is the NFS service on TCP and UDP, moreover we found a shared ***/home/vulnix***. With it, we might found another user **vulnix** for our user list.
+
+
+#### Step 4.
+
+If you remember, there is a **SSH** service on our target so then we can try to **brute force** that service with our found users using **Hydra** o **Medusa**.
+
+For our lucky, there was a password for ***user***:***letmein***
+
+![Hydra brute force](https://github.com/tesslamx/vulhub-walkthrough/blob/master/HackLAB%20-%20Vulnix/images/hydra.png)
+
+#### Step 5. 
+
+Then, we try to connect to the target with those credentials by SSH
+
+
 
 ------
